@@ -1,0 +1,87 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+.main-header {
+    border: 2px solid #41A288;
+    margin: 10px;
+    border-radius: 10px;
+    background-color:rgba(84, 164, 166, 0.2);
+    color:black;
+    padding: 5px 0; /* Aumenté el espacio superior e inferior del encabezado */
+    text-align: center; /* Centrar el contenido del encabezado */
+}
+
+/* Logo y navegación */
+.logo {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 10px;
+}
+
+
+.navbar ul {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    margin-right:30%; /* Ajusta el valor según sea necesario */
+}
+
+.navbar li {
+    margin-right: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color:#54A690; /* Cambia el color al pasar el ratón sobre los enlaces */
+}
+
+/* Formulario de contacto */
+form {
+    
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color:#54A690;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#7AC2AE;
+}

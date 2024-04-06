@@ -1,0 +1,72 @@
+<img class="wave" src="assets\img\wave.png">
+<div class="container">
+    <div class="img">
+        <img src="assets/img/Veterinary-bro.svg">
+    </div>
+    <div class="login-content">
+        <form [formGroup]="loginForm" (submit)="realizoLogin()">
+            <img src="assets/img/avatar.svg">
+            <h2 class="title">Bienvenido</h2>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="div">
+                    <input
+                    type="email"
+                    class="form-control"
+                    formControlName="login"
+                    placeholder="Ingrese su nombre de usuario"
+                  />
+                  @if (login?.invalid && login?.touched) {
+                    <div>
+                      <small class="text-danger">
+                        El nombre de usuario es obligarorio y debe ser un email</small
+                      >
+                    </div>
+                    }
+                </div>
+            </div>
+            <div class="input-div pass">
+                <div class="i"> 
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="div">
+                    <input
+                  type="password"
+                  class="form-control"
+                  formControlName="password"
+                  placeholder="Ingrese su contraseña"
+                />
+                @if (password?.invalid && password?.touched) {
+                    <div>
+                      <small class="text-danger"> El password es obligarorio</small>
+                    </div>
+      
+                    @if (password?.hasError('minlength')) {
+                    <small class="text-danger">
+                      El password no tienen la longitud mínima</small
+                    >
+                    } }
+                  </div>
+                </div>
+            
+                <div class="mt-4">
+                    <div class="form-group float-end">
+                      <a href="" class="small"> ¿Olvidaste tu contraseña?</a>
+                    </div>
+      
+                    <button
+                      type="submit"
+                      class="btn btn-outline-primary"
+                      [disabled]="!loginForm.valid"
+                    >
+                      Iniciar Sesión
+                    </button>
+            </div>
+           
+
+          
+        </form>
+    </div>
+</div>

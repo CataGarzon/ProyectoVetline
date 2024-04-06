@@ -1,0 +1,31 @@
+.custom-header {
+    background-color: #54A4A6;
+    color: white;
+}
+
+.custom-button {
+    background-color: #54A4A6;
+    color: white;
+}
+.custom-button-eliminar {
+    background-color: #F88787;
+    color: black;
+}
+
+.custom-button-actualizar {
+    background-color: #87C5F8;
+    color: black;
+}
+
+.custom-button-editar {
+    background-color: #87F8BB;
+    color: black;
+}
+.wave{
+    position: fixed;
+    top: 150px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    left: 50px; /* Ajusta la distancia desde la izquierda según sea necesario */
+    transform: translateX(0); /* Restablece la transformación en el eje x */
+    height: 100%;
+    z-index: -1;
+}

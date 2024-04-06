@@ -1,0 +1,92 @@
+<img class="wave" src="assets\img\fondito.png">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 bg-light rounded p-4 left-align"> <!-- Añadimos la clase left-align -->
+            <h4 class="text-center">Agregar Usuarios</h4>
+
+            <form [formGroup]="usuarioForm" (ngSubmit)="crearUsuario()">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="nombre"
+                            formControlName="nombre"
+                            required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            formControlName="email"
+                            required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="tipoDocumento"
+                            formControlName="tipoDocumento"
+                            required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="numeroDocumento" class="form-label">Número de Documento</label>
+                    <input
+                            type="number"
+                            class="form-control"
+                            id="numeroDocumento"
+                            formControlName="numeroDocumento"
+                            required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="login" class="form-label">Login</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="login"
+                            formControlName="login"
+                            required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            formControlName="password"
+                            required
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="rol" class="form-label">Rol</label>
+                    <select class="form-control" formControlName="rol" required>
+                        @for (rol of roles; track $index) {
+                        <option [value]="rol">{{ rol }}</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="mb-3 mx-auto"> <!-- Clase mx-auto para centrar horizontalmente el contenedor -->
+                    <button type="button" class="btn btn-danger mx-auto mr-2" [routerLink]="ROUTER_APP.USUARIOS">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-primary mx-auto custom-button agregar-btn">Agregar Usuario</button>
+                </div>
+                
+            </form>
+        </div>
+        <div class="col-md-6 bg-light rounded p-4 right-align"> <!-- Añadimos la clase right-align -->
+            <div class="img">
+                <img src="assets/img/Veterinary-amico.svg">
+            </div>
+        </div>
+    </div>
+</div>

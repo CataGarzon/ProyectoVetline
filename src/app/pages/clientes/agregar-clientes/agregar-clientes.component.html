@@ -1,0 +1,45 @@
+<form [formGroup]="clienteForm" class="form-group row" (submit)="crearCliente()">
+   <br>
+  
+<label for="nombre">Nombre:</label>
+<input type="text"
+formControlName="nombre"
+placeholder="ingrese el nombre del cliente"/>
+
+<label for="dirección">Dirección:</label>
+<input type="text"
+formControlName="direccion"
+placeholder="ingrese la Dirección del cliente"/>
+
+<label for="teléfono">Telefono:</label>
+<input type="number"
+formControlName="telefono"
+placeholder="ingrese el numero de celular del cliente"/>
+
+<label for="email">Email:</label>
+<input type="text"
+formControlName="email"
+placeholder="ingrese el email del cliente"/>
+
+<label for="tipoDocumento">Tipo de documento:</label>
+<input type="text"
+formControlName="tipoDocumento"
+placeholder="ingrese el tipo de documento del cliente"/>
+
+<label for="numeroDocumento">Numero de documento</label>
+<input type="number"
+formControlName="numeroDocumento"
+placeholder="ingrese el numero de documento cliente"/>
+<div class="col-sm-10">
+    <br>
+    <button class="btn btn-secondary" type="submit">Crear cliente</button>
+</div>
+<button class="btn btn-danger" type="button">
+    <a routerLink="./../cliente"> Cancelar</a> I You </button>
+<div class="modal fade" id="exampleModal"
+tabinedex="-1"
+aria-labelledby="exampleModal"
+aria-hidden="true"></div>
+
+
+</form>

@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: #54A4A6;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+footer {
+    margin-top: 50px;
+    color: #666;
+    font-size: 0.9em;
+}

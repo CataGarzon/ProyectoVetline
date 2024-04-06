@@ -1,0 +1,21 @@
+<img  class="wave" src="assets/img/verUsuarios.png">
+<div>
+    <h1>Contactanos!!</h1>
+    <p>Contactanos para tener más información.</p>
+    <form [formGroup]="contactoForm" (submit)="enviarContacto()" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" formControlName="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" formControlName="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" formControlName="mensaje" rows="4" required></textarea>
+        
+        <button type="submit" [disabled]="!contactoForm.valid" style="background-color: #54A4A6; color: white;">Enviar mensaje</button>
+    </form>
+
+    <p>Nombre: {{ contactoForm.value.nombre }} </p>
+    <p>Email: {{ contactoForm.value.email }}</p>
+    <p>Mensaje: {{ contactoForm.value.mensaje }}</p>
+</div>

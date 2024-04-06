@@ -1,0 +1,49 @@
+<ng-template class="container m-6 p-5" [appPermisos]="['ADMIN']">
+  <table class="table" >
+    <thead class="table table-striped table-dark">
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+        <th>Tipo de Documento</th>
+        <th>Número de Documento</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (cliente of misClientes; track $index) 
+      {
+        <tr>
+          <td scope="col">{{$index +1}}</td>
+          <td>{{cliente._id}}</td>
+          <td>{{cliente.nombre}}</td>
+          <td>{{cliente.direccion}}</td>
+          <td>{{cliente.telefono}}</td>
+          <td>{{cliente.email}}</td>
+          <td>{{cliente.tipoDocumento}}</td>
+          <td>{{cliente.numeroDocumento}}</td>
+          <td>{{cliente.estado}}</td>
+          <td>Acciones</td>
+          <td>
+            <a class="btn btn-outline-success btn-sm m-1">Editar</a>
+            <br>
+            <a class="btn btn-outline-danger btn-sm m-1">Eliminar</a>
+            <br>
+            <a class="btn btn-outline-primary btn-sm m-1s">actualizar</a>
+          </td>
+        </tr>
+      }
+     
+    </tbody>
+  </table>
+
+ <button class="btn btn-secondary" type="submit" (click)="agregarCliente()">
+  Agregar
+</button>
+<br>
+<ng-template/>
+

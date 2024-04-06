@@ -1,0 +1,58 @@
+<img  class="wave" src="assets/img/verUsuarios.png">
+<div class="container mt-5">
+  <div class="card">
+      <div class="card-header custom-header">
+          <h4 class="text-center">Usuarios</h4>
+      </div>
+      <div class="card-body">
+          <button class="btn btn-primary mb-3 custom-button" (click)="agregarUsuarios()">Agregar</button>
+          <div class="table-responsive">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th scope="col">Item</th>
+                          <th>Nombre</th>
+                          <th>Email</th>
+                          <th>Tipo de Documento</th>
+                          <th>Numero de Documento</th>
+                          <th>Rol</th>
+                          <th>Estado</th>
+                          <th>Acciones</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      @for (usuario of usuarios; track $index) {
+                      <tr>
+                          <td scope="col">{{ $index }}</td>
+                          <td>{{ usuario.nombre }}</td>
+                          <td>{{ usuario.email }}</td>
+                          <td>{{ usuario.tipoDocumento }}</td>
+                          <td>{{ usuario.numeroDocumento }}</td>
+                          <td>
+                              <select class="form-control form-select-sm" [(ngModel)]="usuario.rol" (change)="actualizarRol(usuario)">
+                                  @for (rol of roles; track $index) {
+                                  <option [value]="rol">{{ rol }}</option>
+                                  }
+                              </select>
+                          </td>
+                          <td>{{ usuario.estado }}</td>
+                          <td>
+                              <button class="btn btn-outline-success btn-sm m-1 custom-button-upt" (click)="editarUsuario(usuario._id)">
+                                  Editar
+                              </button>
+                              <button class="btn btn-outline-danger btn-sm m-1 custom-button-del" (click)="eliminarUsuario(usuario._id)">
+                                  Eliminar
+                              </button>
+                              <button class="btn btn-outline-secondary btn-sm m-1 custom-button" (click)="actualizarRol(usuario)">
+                                Actualizar
+                            </button>
+                            
+                          </td>
+                      </tr>
+                      }
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>

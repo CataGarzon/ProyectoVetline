@@ -1,0 +1,24 @@
+.img-form-container {
+    display: flex; /* Utilizamos flexbox para organizar los elementos horizontalmente */
+    align-items: center; /* Alineamos verticalmente los elementos al centro */
+}
+
+.img {
+    flex: 1; /* La imagen ocupará el 50% del espacio disponible */
+    padding-right: 20px; /* Añadimos un espacio a la derecha para separar la imagen del formulario */
+}
+
+.form-container {
+    flex: 1; /* El formulario ocupará el 50% del espacio disponible */
+    text-align: right; /* Alineamos el contenido del formulario a la derecha */
+}
+.agregar-btn {
+    background-color: #1ECEE9;
+}
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}

@@ -1,0 +1,10 @@
+.wave{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    margin-left: 120px;}
+.custom-btn {
+    background-color: #54A4A6;
+    border-color: #54A4A6;
+  }

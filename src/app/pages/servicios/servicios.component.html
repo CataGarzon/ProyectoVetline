@@ -1,0 +1,40 @@
+<img class="wave" src="assets\img\animalitos.png">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center mb-4">Agendar Cita para Mascotas</h2>
+        <form>
+            <br>
+            <br>
+          <div class="form-group">
+            <label for="numeroDocumento">Número de Documento del Usuario:</label>
+            <input type="text" class="form-control" id="numeroDocumento" name="numeroDocumento" required>
+          </div>
+          <div class="form-group">
+            <label for="fechaCreacion">Fecha de Creación:</label>
+            <input type="date" class="form-control" id="fechaCreacion" name="fechaCreacion" required>
+          </div>
+          <div class="form-group">
+            <label for="estado">Estado:</label>
+            <select class="form-control" id="estado" name="estado" required>
+              <option value="pendiente">Pendiente</option>
+              <option value="confirmada">Confirmada</option>
+              <option value="cancelada">Cancelada</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required>
+          </div>
+          <div class="form-group">
+            <label for="duracion">Duración (en horas):</label>
+            <input type="number" class="form-control" id="duracion" name="duracion" required>
+          </div>
+          <br>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary custom-btn">Agendar Cita</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

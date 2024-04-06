@@ -1,0 +1,42 @@
+<img class="wave" src="assets\img\fondito.png">
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 bg-light rounded p-4 left-align">
+        <h4 class="text-center">Agregar Mascota</h4>
+  
+        <form [formGroup]="mascotaForm" (ngSubmit)="crearMascota()">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" formControlName="nombre" required />
+          </div>
+          <div class="mb-3">
+            <label for="especie" class="form-label">Especie</label>
+            <input type="text" class="form-control" id="especie" formControlName="especie" required />
+          </div>
+          <div class="mb-3">
+            <label for="raza" class="form-label">Raza</label>
+            <input type="text" class="form-control" id="raza" formControlName="raza" required />
+          </div>
+          <div class="mb-3">
+            <label for="numeroDocumento" class="form-label">Número de Documento del Propietario</label>
+            <input type="number" class="form-control" id="numeroDocumento" formControlName="numeroDocumento" required />
+          </div>
+          <div class="mb-3">
+            <label for="observaciones" class="form-label">Observaciones</label>
+            <textarea class="form-control" id="observaciones" formControlName="observaciones"></textarea>
+          </div>
+  
+          <div class="mb-3 mx-auto">
+            <button type="button" class="btn btn-danger mx-auto mr-2">Cancelar</button>
+            <button type="submit" class="btn btn-primary mx-auto custom-button agregar-btn">Agregar Mascota</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 bg-light rounded p-4 right-align">
+        <div class="img">
+          <img src="assets/img/Veterinary-pana.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+  
